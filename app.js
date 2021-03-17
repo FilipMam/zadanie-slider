@@ -1,10 +1,13 @@
 const arrowLeft = document.querySelector(".arrow--light");
 const arrowRight = document.querySelector(".arrow--right");
+const images = document.querySelectorAll("img");
 
-const currentSlide = 0;
+const currentSlide;
 
 const showSlide = (slideIndex) => {
-    [...document.querySelectorAll("img")][slideIndex].classList.add("active");
+    document.querySelector(".active") && document.querySelector(".active").classList.remove("active");
+    [...images][slideIndex].classList.add("active");
+    currentSlide = slideIndex;
 };
 
 // Tutaj umieść swój kod.
